@@ -1,0 +1,14 @@
+{% extends 'blog/base_index.html' %}
+
+{% block content %}
+    <h2>Registro de cliente</h2>
+    <form method="POST" class="post-form">
+    
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="save btn btn-default">Registrar</button>
+        
+    </form>
+{% endblock %}
