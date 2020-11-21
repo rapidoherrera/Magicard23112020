@@ -1,26 +1,19 @@
-header {
-    background-color: #005bb3;
-    color: #ffffff;
-    font-family: "Arial Narrow", sans-serif;
-    text-align: center;
-  }
-
-h1 {
+h1, h3{
     
     color:#111010;
     font-family: "Arial Narrow", sans-serif;
     text-align: left;
-    font-family: "Arial Narrow", sans-serif;
-    text-align: left;
+    
 }
 
-h3, p {
-  color:#f8efef;
-  font-family: "Arial Narrow", sans-serif;
-  text-align: left;
-  font-family: "Arial Narrow", sans-serif;
-  text-align: left;
+p{
+    
+    color:#111010;
+    font-family: "Arial Narrow", sans-serif;
+    text-align: left;
+    
 }
+
 
 .container-fluid {
 	color:#f8efef;
@@ -234,6 +227,22 @@ main {
 	.formulario__btn {
 		width: 100%;
 	}
+}
+
+h1{
+    
+    color:#111010;
+    font-family: "Arial Narrow", sans-serif;
+    text-align: left;
+    
+}
+
+p{
+    
+    color:#111010;
+    font-family: "Arial Narrow", sans-serif;
+    text-align: left;
+    
 }
 
 

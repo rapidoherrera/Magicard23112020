@@ -1,48 +1,23 @@
 {% extends 'blog/base_index.html' %}
 {% load static %}
-<!DOCTYPE html>
 
-<html lang="en">
-    <head>
         {% block title %} Acerca de {% endblock%}   
         
-    </head>
-    <body>
-        {% block contect %}
-        <style type="text/css">
-            body {
-              color: aliceblue;
-              background-color:aliceblue }
-        </style>
-        <div class="container-fluid" >
-                    <div class="row">
-                        <div class="col-lg-6 contact-info">
-                            <h3 style= "color:aliceblue"> ¿QUÉ ES MAGICARDS?</h3> 
-                            <p>Magicards vende Mazos, Cartas Magic y todo tipo de contenido relacionado con el tema
-                            </p>
-                            <p>+569 49 62 94 90</p>
-                            <p>Magicards@contacto.com</p>
-                            <div class="contact-social">
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </div>
-                            
-                        </div>
-                    </div>
+        {% block content %}
+        
+        <div>
+            <div class="row">
+                <div class="col-lg-6 contact-info">
+                    <h1> ¿QUÉ ES MAGICARDS?</h1> 
+                    <h1>Magicards vende Mazos, Cartas Magic y todo tipo de contenido relacionado con el tema</h1>                                     
+                </div>
+            </div>
             
         </div>
         {% endblock %} 
         
                  
-    </body>                
-                 
-       
-        
-        
-</html>    
+
 
 
 
