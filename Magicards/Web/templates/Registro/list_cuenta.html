@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% block title %}Magicards{% endblock title %}
+{% block titulo_principal %}
+
+<div id=titulo_pagina>
+    Lista de Cuentas Registradas
+</div>
+{% endblock %} 
+
+{% block content %} {% if object_list %}
+<div class="container">
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Imágen</th>
+            <th>Usuario</th>
+            <th>Edad</th>
+            <th>Descripcion</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cuenta in object_list %}
+        <tr>
+            <td><img src=/static/images/logo4.png{{ prod.imagen }} style="width: 100px;" /> </td>
+            <th scope="row">{{ cuenta.alias }} </th>
+            <td>{{ cuenta.edad }}</td>
+            <td>${{ cuenta.descripcion }}</td>
+
+            <td><a class="btn btn-primary" href="{% url 'edit_cuenta' cuenta.id %}">Editar</a></td>
+            <td><a class="btn btn-danger" href="{% url 'del_cuenta' cuenta.id %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>
+                <a class="btn btn-primary" href="{% url 'add_cuenta' %}"><i class="fas fa-plus">Agregar</i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{% else %}
+    <h1>No hay registros de cuenta</h1>
+{% endif %} {% endblock %}
+

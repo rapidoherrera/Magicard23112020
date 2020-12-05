@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+
+  <body>
+    <h2>Lista de mensajes</h2>
+
+    {% for c in cuentas %}
+        <div>
+            <p> alias: {{ c.alias }} </p>
+            <p> edad: {{ c.edad }} </p>
+            <p> descripcion: {{ c.descripcion }} </p>
+        </div>
+        <br>
+    {% endfor %}
+
+  </body>
+</html>

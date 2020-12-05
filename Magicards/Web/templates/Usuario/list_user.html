@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block titulo_principal %} CRUD: Select * {% endblock %}
+
+
+{% block content %}
+{% if user.is_superuser %}
+                
+{% endif %}
+    <h2 style="color:white" class="badge-warning">Listado Usuarios</h2>
+   {% if object_list %}
+        {% for user in object_list %}
+           <br>
+
+            <p style="color:white">Nombre: {{ user.username }}</p>
+            <p style="color:white">email: {{ user.email }}</p>      
+
+            <br>
+        {% endfor %}
+        
+        {% else %}
+        <h1>No hay registros de user</h1>
+  {% endif %}
+
+{% endblock %}

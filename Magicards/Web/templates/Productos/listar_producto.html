@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block titulo_pagina %} COMICSH {% endblock %}
+{% block titulo_principal %} Productos {% endblock %}
+{% block content %}
+{% if user.is_superuser %}
+{% if object_list %}
+
+<div class="container">
+    <table class="table table-sm table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Imágen</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prod in object_list %}
+
+            <tr>
+                <td><img src=/static/images/{{ prod.imagen }} style="width: 100px;" /> </td>
+                <td>{{ prod.nombre }}</td>
+                <td>{{ prod.descripcion}}</td>
+                <td>${{ prod.precio}}</td>
+                <td>
+                    <a class="btn btn-primary" href="{% url 'edit_producto' prod.id %}"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-danger" href="{% url 'del_producto' prod.id %}"><i class="fas fa-trash"></i></a>
+                </td>
+
+            </tr>
+
+            {% endfor %}
+            <tr>
+                <td>
+                    <a class="btn btn-primary" href="{% url 'add_producto' %}"><i class="fas fa-plus"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% else %}
+<br>
+<br>
+<br>
+<h1 class="bg-danger">No hay registros de productos</h1>
+<br>
+<br>
+<br>
+{% endif %}
+
+{% else %}
+<br>
+<br>
+<br>
+<h1 class="bg-danger"> ERROR:</h1>
+    <h4 style="color:black" class="bg-warning">No Tienes los permisos para acceder a esta pagina.</h4>
+<br>
+<br>
+<br>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block title %}Magicards{% endblock title %}
+<!DOCTYPE html>
+<body>
+    <div class="container">
+        <h1>Agregar Cuenta</h1>
+        <form method="POST">
+            {% csrf_token %} 
+            {{ form.as_table }}
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+</body>
+</html>

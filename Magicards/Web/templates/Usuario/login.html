@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block extrastatic %}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}"  type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="div_login">
+    <h2>Login</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}    
+      <div>{{ form.errors.username }}</div>    
+      <button type="submit" >Iniciar Sesión</button>
+      <br>
+      <a href="{% url 'registrar' %}"><h5>¿Eres Nuevo? Registrate Aqui</h5></a>
+      <a href="{% url 'password_reset' %}"><h5>¿Olvidaste la Contraseña? Recuperar Aqui</h5></a>      
+    </form>
+</div>
+{% endblock %}
+
