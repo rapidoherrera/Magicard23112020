@@ -1,0 +1,63 @@
+.div_nuevo{
+    text-align: center;
+    margin: 40px auto 0 auto;
+    max-width: 500px;
+    border: 1px solid rgb(255,70,17);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.123);
+    margin-bottom: 30px;
+    position: relative;
+    border-top: 40px solid rgb(255,70,17);
+    padding: 0 30px 10px 30px;
+    background-color: white;
+}
+
+.div_nuevo button{
+    background-color: rgb(255,70,17);
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid  rgb(218, 62, 19);
+    padding: 0 15px 0 15px;
+
+}
+
+.div_nuevo button:hover{
+    background-color:  rgb(153, 44, 14);
+}
+
+.div_nuevo input{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 5px 15px 5px 15px;
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(255,70,17);
+    height: 30px;
+}
+
+.div_nuevo select{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 5px 15px 5px 15px;
+    width: 90%;
+    height: 30px;
+    border-top: 1px solid rgb(210, 210, 210);
+    border-left: 1px solid rgb(210, 210, 210);
+    border-right: 1px solid rgb(210, 210, 210);
+    border-bottom: 3px solid rgb(255,70,17);
+}
+
+.div_nuevo label{
+    float: left;
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.div_nuevo h2{
+    font-size: 22px;
+    color:rgb(255, 255, 255);
+    margin-top: -35px;
+    margin-bottom: 30px;
+}

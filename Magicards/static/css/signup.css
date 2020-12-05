@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+
+.div_registro{
+    margin: 50px auto 50px auto;
+    max-width: 500px;
+    font-size: 16px;
+    border: 1px solid rgb(255,70,17);
+    border-top: 40px solid rgb(255,70,17);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.123);
+    text-align: center;
+    padding: 20px;
+}
+
+.div_registro span{
+    display: none;
+}
+
+.div_registro ul{
+    display: none;
+}
+
+input{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 5px 15px 5px 15px;
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(255,70,17);
+    height: 30px;
+}
+
+#btn_signup{
+    background-color: rgb(255,70,17);
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid  rgb(218, 62, 19);
+    padding: 0 15px 0 15px;
+}
+
+#btn_signup:hover{
+    background-color:  rgb(153, 44, 14);
+}
+
+label{
+    float: left;
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+}
+
+h2{
+    margin-top: -58px;
+    color: white;
+}

@@ -1,0 +1,22 @@
+{% extends 'MainApp/base.html'%}
+{% load static %}
+{% block extrastatic %}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+<!-- {% static 'css/nuevo.css'%} -->
+{%endblock%}
+
+{% block content %}
+
+    <div class="div_login">
+        <h2>Datos Usuario</h2>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn-default">Crear Cuenta</button>
+        </form>
+    </div>
+
+
+    
+{% endblock %}
+
+
