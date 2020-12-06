@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% load static %}
+{% block title %} Mantenedores {% endblock%}    
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}"  type="text/css">
+<div class="div_login">
+    <h2>Mantenedor</h2>
+    <br>
+    <a class="nav-link waves-effect" href="{% url 'listar_producto' %}" ><h5>Catalogo de Productos</h5></a>    
+    <br>
+    <a class="nav-link waves-effect" href="{% url 'list_user' %}" ><h5>Catalogo de Usuarios</h5></a>    
+</div>
+
+{% endblock %}

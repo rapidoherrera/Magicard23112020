@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block titulo_pagina %} Magicards {% endblock %}
+{% block titulo_principal %} Formulario Usuarios {% endblock %}
+
+{% block content %}
+{% if user.is_staff %}       
+    <div class="div_login">
+        <br>
+        <div class="row">            
+                
+                    <h1>Usuario</h1>
+                    <form id="formulario" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{ field.name}}">{{ field.label_tag }}</label><br>
+                            {{ field }}
+                            <div class="bg-danger mt-1">{{ field.errors }}</div>
+                        </div>
+                        {% endfor %}
+                        <input type="submit" value="Grabar" class="btn btn-success">
+                    </form>              
+        </div>            
+        <br>        
+    </div>
+{% endif %}
+{% endblock %}

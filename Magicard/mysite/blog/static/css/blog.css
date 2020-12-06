@@ -1,0 +1,14 @@
+h1 a,
+h2 a {
+    color: #C25100;
+}
+
+.published_date_class {
+    font-weight: bolder;
+    color: blue;
+}
+
+body {
+    padding-left: 100 px important!;
+    border: 20px solid transparent;
+}

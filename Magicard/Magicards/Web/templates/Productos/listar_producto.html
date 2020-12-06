@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block titulo_pagina %} Magicards {% endblock %}
+{% block titulo_principal %} Productos {% endblock %}
+{% block content %}    
+    {% if user.is_staff %} 
+        {% if object_list %}
+            <div class="container">
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imágen</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prod in object_list %}
+                        <tr>
+                            <td><img src=/static/images/{{ prod.imagen }} style="width: 100px;" /> </td>
+                            <td>{{ prod.nombre }}</td>
+                            <td>{{ prod.descripcion}}</td>
+                            <td>${{ prod.precio}}</td>
+                            <td>
+                                <a class="btn btn-primary" href="{% url 'edit_producto' prod.id %}"><i class="fas fa-edit"></i><p>Editar</p></a>
+                                <a class="btn btn-danger" href="{% url 'del_producto' prod.id %}"><i class="fas fa-trash"></i><p>Eliminar</p></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td>
+                                <a class="btn btn-primary" href="{% url 'add_producto' %}"><i class="fas fa-plus"></i><p>Agregar</p></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="div_login">
+                <br>
+                <h1> ERROR:</h1>
+                    <h5>No hay registros de productos</h5>
+                <br>        
+            </div>               
+        {% endif %}
+    {% else %}
+        <div class="div_login">
+            <br>
+            <h1> ERROR:</h1>
+                <h5>No Tienes los permisos para acceder a esta pagina.</h5>
+            <br>        
+        </div>        
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h2>
+                <a href="post/{{ post.id }}">{{ post.title }}</a>
+                <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            </h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <div class="date published_date_class">
+                {{ post.published_date }}
+            </div>
+        </div>
+    {% endfor %}
+    <br><br>
+    <a href="{% url 'post_new' %}" style="font-size: 20px;">Ingresar un nuevo post</a>
+{% endblock %}

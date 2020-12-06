@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block titulo_pagina %}Magicard{% endblock %}
+{% block titulo_principal %} Eliminar Usuario {% endblock %}
+{% block content %}
+    {% if user.is_staff %} 
+        <div class="div_login">
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <p class="delete-msg">¿Estás seguro de que quieres eliminar {{ object.nombre }}?</p>
+                <a href="{% url 'list_user' %}" class="btn btn-secondary">NO</a>
+                <button class="btn btn-primary" type="submit">Si</button>
+            </form>
+            <br>        
+        </div>       
+    {% else %}
+        <div class="div_login">
+            <br>
+            <h1> ERROR:</h1>
+                <h5>No Tienes los permisos para acceder a esta pagina.</h5>
+            <br>        
+        </div>
+    {% endif %}
+{% endblock %}
